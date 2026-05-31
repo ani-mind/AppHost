@@ -1,0 +1,12 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.3.5">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <UserSecretsId>fe22f766-4686-438f-9a04-185a7cfbcdcb</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\AniMind.Core\AniMind.Core.Api\AniMind.Core.Api.csproj" />
+    </ItemGroup>
+
+</Project>
