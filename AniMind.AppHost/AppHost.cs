@@ -1,5 +1,11 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-builder.AddProject<Projects.AniMind_Core_Api>("animind-core");
+var seq = builder.AddSeq("seq")
+    .WithImageTag("2025.2")
+    .WithDataVolume()
+    .WithContainerName("animind-seq");
+
+builder.AddProject<Projects.AniMind_Core_Api>("animind-core")
+    .WithReference(seq);
 
 await builder.Build().RunAsync();
